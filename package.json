@@ -1,0 +1,19 @@
+{
+  "name": "work-schedule",
+  "version": "1.0.0",
+  "description": "work schedule project by safa maklada 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Safamaklada1/Work-schedule.git"
+  },
+  "author": "Safa Maklada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Safamaklada1/Work-schedule/issues"
+  },
+  "homepage": "https://github.com/Safamaklada1/Work-schedule#readme"
+}

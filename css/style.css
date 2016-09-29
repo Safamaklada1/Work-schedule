@@ -1,0 +1,19 @@
+bo
+#title h1{
+	direction: rtl;
+	text-align:center;
+}
+#title h3{
+	text-align:center;
+	direction: rtl;
+}
+#title b{
+	
+}
+thead{
+	
+	direction: rtl;
+}
+thead th{
+	border: 1px solid black;
+}
