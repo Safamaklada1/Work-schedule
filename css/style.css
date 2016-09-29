@@ -1,5 +1,12 @@
-bo
-#title h1{
+.table.table-bordered{
+	direction: rtl;
+	text-align:center;
+}
+.table.table-bordered th{
+	text-align:center; 
+}
+
+/*#title h1{
 	direction: rtl;
 	text-align:center;
 }
@@ -16,4 +23,4 @@ thead{
 }
 thead th{
 	border: 1px solid black;
-}
+}*/
