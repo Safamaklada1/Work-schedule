@@ -7,17 +7,18 @@
 	<body>
 		<div class="text-center">
 			<h1>סידור עבודה יומי למפעילים</h1><h3>מתקן K &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>מחלקת ייצור</b></h3> 
-			</div><hr>
-		<table class="table table-bordered">
-			<thead><tr class="header">
-				<th>תאריך</th><th>תפקיד</th><th>משמרת בוקר</th><th>משמרת צהריים</th><th>משמרת לילה</th><th>חופש משמרת</th><th>חופש שנתי</th><th>מחלה</th><th>הדרכה</th><th>שונות</th>
-			</tr>
-			</thead>
-		</table>
+			</div>
+		
+		<create-worker></create-worker>
+		
+		
 		<script src="node_modules/jquery/dist/jquery.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="node_modules/angular/angular.js"></script>
 		
 		<script src="app/Work-schedule.js"></script>
+		<!-- <script src="app/controllers/workers.js"></script> -->
+		<script src="app/directives/createWorker.js"></script>
+		<script src="app/controllers/workersList.js"></script>
 	</body>
 </html>
