@@ -6,19 +6,67 @@
 	</head>
 	<body>
 		<div class="text-center">
-			<h1>סידור עבודה יומי למפעילים</h1><h3>מתקן K &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>מחלקת ייצור</b></h3> 
+			<h1>סידור עבודה יומי למפעילים</h1><h3>מתקן K &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>מחלקת ייצור</b></h3>
+		</div>
+		<div ng-controller="createWorkers">
+			<div>
+			<input type="number" placeholder="number" ng-model="number"/>
+			<input type="number" placeholder="משמרת" ng-model="shift"/>
+			<input type="text" placeholder="שם" ng-model="name"/>
+			מנהל משמרת
+			<input type="checkbox"/>
+			לווח
+			<input type="checkbox"/>
+			מפעיל 1100
+			<input type="checkbox"/>
+			מעבדה
+			<input type="checkbox"/>
+			טכני
+			<input type="checkbox"/>
+			פרילינג
+			<input type="checkbox"/>
+		
+			<button class="btn" ng-click="worker()">
+				createWorker
+			</button>
+			<div><button ng-click="getList()">getList</button>
+				<table class="table">
+					<thead>
+						<th>num</th><th>shift</th><th>name</th>
+					</thead>
+					<tbody>
+						<tr ng-repeat="p in parsedWorkerList">
+							<td>{{number}}</td>
+							<td>{{parsedWorkerList.shift}}</td>
+							<td>{{parsedWorkerList.name}}</td>
+						</tr>
+						<!-- <td><tr>num</tr><br>
+							<tr>{{number}}</tr></td>
+						<td><tr>shift</tr><br><tr>{{parsedWorkerList.shift}}</tr></td>
+						<td><tr>name</tr><br><tr>{{parsedWorkerList.name}}</tr></td> -->
+						
+						
+					</tbody>
+					
+				</table>
 			</div>
+		</div>
+		</div>
 		
-		<create-worker></create-worker>
-		
-		
+		<!-- <create-worker></create-worker> -->
+		<!-- <workers-List></workers-List> -->
+
 		<script src="node_modules/jquery/dist/jquery.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="node_modules/angular/angular.js"></script>
-		
+
 		<script src="app/Work-schedule.js"></script>
 		<!-- <script src="app/controllers/workers.js"></script> -->
-		<script src="app/directives/createWorker.js"></script>
+		<!-- <script src="app/directives/createWorker.js"></script> -->
+		<!-- <script src="app/directives/workersList.js"></script> -->
+		<script src="app/controllers/createWorkers.js"></script>
 		<script src="app/controllers/workersList.js"></script>
+		<script src="app/controllers/getWorkersList.js"></script>
+		
 	</body>
 </html>
