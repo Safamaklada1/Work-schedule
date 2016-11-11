@@ -5,21 +5,33 @@
 		$scope.number;
 		$scope.shift;
 		$scope.name;
-		
+		$scope.jobTitle={
+			value1:'v',
+			value2:'v',
+			value3:'v',
+			value4:'v',
+			value5:'v',
+			value6:'v',
+			};
 		$scope.worker=function(){
-			var workerr={shift:$scope.shift,name:$scope.name};
-			// console.log("shift:",$scope.shift,"name:",$scope.name);
-			localStorage.setItem($scope.number,JSON.stringify(workerr));
-		};
-		$scope.getList=function(){
-			var item=$scope.number;
-			$scope.getWorker=localStorage.getItem(item);
-			$scope.parsedWorkerList=JSON.parse($scope.getWorker);
+			var allworkers=(JSON.parse(localStorage.getItem("allworkers")));
+			 if(!allworkers)allworkers=[];
+			var worker1={shift:$scope.shift,name:$scope.name,a:$scope.jobTitle.value1,b:$scope.jobTitle.value2,c:$scope.jobTitle.value3,d:$scope.jobTitle.value4,e:$scope.jobTitle.value5,f:$scope.jobTitle.value6};
+			allworkers.push(worker1);
+			console.log(worker1);
+			localStorage.setItem("allworkers",JSON.stringify(allworkers));
+			
 			
 		};
-		for (numb=0; numb < 100; numb++) {
-		  $scope.number=$scope.number+numb;
+		$scope.getList=function(){
+			
+			$scope.getWorker=JSON.parse(localStorage.getItem("allworkers"));
+			// $scope.parsedWorkerList=JSON.parse($scope.getWorker);
+			
 		};
+		// for (numb=0; numb < 100; numb++) {
+		  // $scope.number=$scope.number+numb;
+		// };
 	}
 	
 })();

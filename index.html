@@ -9,41 +9,45 @@
 			<h1>סידור עבודה יומי למפעילים</h1><h3>מתקן K &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>מחלקת ייצור</b></h3>
 		</div>
 		<div ng-controller="createWorkers">
-			<div>
-			<input type="number" placeholder="number" ng-model="number"/>
+			<div >
 			<input type="number" placeholder="משמרת" ng-model="shift"/>
 			<input type="text" placeholder="שם" ng-model="name"/>
+			<div class="box1">
+			<input type="checkbox" ng-model="jobTitle.value1"  ng-true-value="'v'" ng-false-value="'x'"/>
 			מנהל משמרת
-			<input type="checkbox"/>
-			לווח
-			<input type="checkbox"/>
-			מפעיל 1100
-			<input type="checkbox"/>
+			<input type="checkbox"  ng-model="jobTitle.value2"  ng-true-value="'v'" ng-false-value="'x'"/>
+			בקרה
+			<input type="checkbox"  ng-model="jobTitle.value3"  ng-true-value="'v'" ng-false-value="'x'"/>
+			מפעיל K
+			<input type="checkbox"  ng-model="jobTitle.value4"  ng-true-value="'v'" ng-false-value="'x'"/>
 			מעבדה
-			<input type="checkbox"/>
+			<input type="checkbox"  ng-model="jobTitle.value5"  ng-true-value="'v'" ng-false-value="'x'"/>
 			טכני
-			<input type="checkbox"/>
+			<input type="checkbox"  ng-model="jobTitle.value6"  ng-true-value="'v'" ng-false-value="'x'"/>
 			פרילינג
-			<input type="checkbox"/>
-		
+			</div>
 			<button class="btn" ng-click="worker()">
 				createWorker
 			</button>
 			<div><button ng-click="getList()">getList</button>
 				<table class="table">
 					<thead>
-						<th>num</th><th>shift</th><th>name</th>
+						<th>shift</th><th>name</th><th>מנהל משמרת</th><th>בקרה</th><th>מפעיל K</th><th>מעבדה</th><th>טכני</th><th>פרילינג</th>
 					</thead>
 					<tbody>
-						<tr ng-repeat="p in parsedWorkerList">
-							<td>{{number}}</td>
-							<td>{{parsedWorkerList.shift}}</td>
-							<td>{{parsedWorkerList.name}}</td>
+						<tr ng-repeat="a in getWorker">
+							
+							<td>{{a.shift}}</td>
+							<td>{{a.name}}</td>
+							<td>{{a.a}}</td>
+							<td>{{a.b}}</td>
+							<td>{{a.c}}</td>
+							<td>{{a.d}}</td>
+							<td>{{a.e}}</td>
+							<td>{{a.f}}</td>
+							
 						</tr>
-						<!-- <td><tr>num</tr><br>
-							<tr>{{number}}</tr></td>
-						<td><tr>shift</tr><br><tr>{{parsedWorkerList.shift}}</tr></td>
-						<td><tr>name</tr><br><tr>{{parsedWorkerList.name}}</tr></td> -->
+						
 						
 						
 					</tbody>
@@ -52,21 +56,522 @@
 			</div>
 		</div>
 		</div>
-		
-		<!-- <create-worker></create-worker> -->
-		<!-- <workers-List></workers-List> -->
+		<!-- add ng-view to createWorker.html-->
+	<div>
+		<table class="table-bordered">
+			
+				<tr>
+					<th>תאריך</th>
+					<th>תפקיד</th>
+					<th>משמרת בוקר</th>
+					<th>משמרת צהריים</th>
+					<th>משמרת לילה</th>
+					<th>חופש</th>
+					
+				</tr>
+			
 
+			
+				<tr>
+				<td rowspan="7"> 30/10/2016<br>ראשון</td>
+				</tr>
+				<tr>
+				<td>מנהל משמרת</td>
+				<td><button ng-click="getManagementNames()">מנהל משמרת</button>
+					<ul><li ng-repeat="manager in managers">
+						{{manager.name}}
+					</li></ul>
+					
+					
+				</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				
+				</tr>
+				<tr>
+					
+					<td>בקרה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מפעיל K</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מעבדה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>טכני</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>פרילינג</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>	
+					<tr><td><br></td></tr>
+			<tr>
+					<th>תאריך</th>
+					<th>תפקיד</th>
+					<th>משמרת בוקר</th>
+					<th>משמרת צהריים</th>
+					<th>משמרת לילה</th>
+					<th>חופש</th>
+					
+				</tr>
+			
+
+			
+				<tr>
+					
+				<td rowspan="7"> 31/10/2016<br>שני</td>
+				</tr>
+				<tr>
+				<td>מנהל משמרת</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				
+				</tr>
+				<tr>
+					
+					<td>בקרה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מפעיל K</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מעבדה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>טכני</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>פרילינג</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>			
+				<tr><td><br></td></tr>
+			<tr>
+					<th>תאריך</th>
+					<th>תפקיד</th>
+					<th>משמרת בוקר</th>
+					<th>משמרת צהריים</th>
+					<th>משמרת לילה</th>
+					<th>חופש</th>
+					
+				</tr>
+			
+
+			
+				<tr>
+					
+				<td rowspan="7"> 01/11/2016<br>שלישי</td>
+				</tr>
+				<tr>
+				<td>מנהל משמרת</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				
+				</tr>
+				<tr>
+					
+					<td>בקרה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מפעיל K</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מעבדה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>טכני</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>פרילינג</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>			
+				<tr><td><br></td></tr>
+			<tr>
+					<th>תאריך</th>
+					<th>תפקיד</th>
+					<th>משמרת בוקר</th>
+					<th>משמרת צהריים</th>
+					<th>משמרת לילה</th>
+					<th>חופש</th>
+					
+				</tr>
+			
+
+			
+				<tr>
+					
+				<td rowspan="7"> 02/11/2016<br>רביעי</td>
+				</tr>
+				<tr>
+				<td>מנהל משמרת</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				
+				</tr>
+				<tr>
+					
+					<td>בקרה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מפעיל K</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מעבדה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>טכני</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>פרילינג</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>			
+				<tr><td><br></td></tr>
+			<tr>
+					<th>תאריך</th>
+					<th>תפקיד</th>
+					<th>משמרת בוקר</th>
+					<th>משמרת צהריים</th>
+					<th>משמרת לילה</th>
+					<th>חופש</th>
+					
+				</tr>
+			
+
+			
+				<tr>
+					
+				<td rowspan="7"> 03/11/2016<br>חמישי</td>
+				</tr>
+				<tr>
+				<td>מנהל משמרת</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				
+				</tr>
+				<tr>
+					
+					<td>בקרה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מפעיל K</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מעבדה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>טכני</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>פרילינג</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>			
+				<tr><td><br></td></tr>
+			<tr>
+					<th>תאריך</th>
+					<th>תפקיד</th>
+					<th>משמרת בוקר</th>
+					<th>משמרת צהריים</th>
+					<th>משמרת לילה</th>
+					<th>חופש</th>
+					
+				</tr>
+			
+
+			
+				<tr>
+					
+				<td rowspan="7"> 04/11/2016<br>ששי</td>
+				</tr>
+				<tr>
+				<td>מנהל משמרת</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				
+				</tr>
+				<tr>
+					
+					<td>בקרה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מפעיל K</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מעבדה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>טכני</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>פרילינג</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>			
+				<tr><td><br></td></tr>
+			<tr>
+					<th>תאריך</th>
+					<th>תפקיד</th>
+					<th>משמרת בוקר</th>
+					<th>משמרת צהריים</th>
+					<th>משמרת לילה</th>
+					<th>חופש</th>
+					
+				</tr>
+			
+
+			
+				<tr>
+					
+				<td rowspan="7"> 05/11/2016<br>שבת</td>
+				</tr>
+				<tr>
+				<td>מנהל משמרת</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				
+				</tr>
+				<tr>
+					
+					<td>בקרה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מפעיל K</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>מעבדה</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>טכני</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>פרילינג</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>			
+				
+				
+					
+				
+				
+			
+		</table>
+		</div>
 		<script src="node_modules/jquery/dist/jquery.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="node_modules/angular/angular.js"></script>
+		<!-- <script src="node_modules/angular-route/angular-route.js"></script> -->
 
 		<script src="app/Work-schedule.js"></script>
-		<!-- <script src="app/controllers/workers.js"></script> -->
-		<!-- <script src="app/directives/createWorker.js"></script> -->
-		<!-- <script src="app/directives/workersList.js"></script> -->
+
 		<script src="app/controllers/createWorkers.js"></script>
 		<script src="app/controllers/workersList.js"></script>
 		<script src="app/controllers/getWorkersList.js"></script>
-		
+
 	</body>
 </html>

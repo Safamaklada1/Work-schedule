@@ -1,26 +1,17 @@
-.table.table-bordered{
+/*.table.table-bordered{
 	direction: rtl;
 	text-align:center;
 }
 .table.table-bordered th{
 	text-align:center; 
-}
-
-/*#title h1{
-	direction: rtl;
-	text-align:center;
-}
-#title h3{
-	text-align:center;
-	direction: rtl;
-}
-#title b{
-	
-}
-thead{
-	
-	direction: rtl;
-}
-thead th{
-	border: 1px solid black;
 }*/
+.box1{
+	direction: rtl;
+	float:left;
+}
+ul{
+	list-style-type: none;
+}
+ul li{
+	list-style-type: none;
+}
